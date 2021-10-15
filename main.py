@@ -5,7 +5,7 @@ from pylibdmtx import pylibdmtx
 
 #
 # load the image and convert it to grayscale
-image = cv2.imread("Img_Data/test1.jpg")
+image = cv2.imread("Img_Data/test2.jpg")
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 # compute the Scharr gradient magnitude representation of the images
 # in both the x and y direction using OpenCV 2.4
@@ -49,14 +49,14 @@ for cnt in cnts:
     # finding area of the contour so we can consider contours having area greater than 7000 sq.pixels
     area = cv2.contourArea(cnt)
 
-    if area >=30000 and area <= 45000 and shape[0] == 4:
+    if area >=35000 and area <= 42250 and shape[0] == 4:
         rect = cv2.minAreaRect(cnt)
         # box = cv2.cv.BoxPoints(rect) if imutils.is_cv2() else cv2.boxPoints(rect)
         # box = np.int0(box)
         # cv2.drawContours(image, [box], -1, (0, 255, 0), 3)
         x, y, w, h = cv2.boundingRect(cnt)
         # ROI = image[y :y + h, x:x + w]
-        ROI = image[y - 20:y + h + 20, x - 20:x + w + 20]
+        ROI = image[y - 50:y + h + 50, x - 50:x + w + 50]
         print(area)
         image1 = cv2.imread('ROI')
         gray1 = cv2.cvtColor(ROI, cv2.COLOR_BGR2GRAY)
