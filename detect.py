@@ -118,7 +118,7 @@ class Detect:
             if matrix_code is not None:
                 return matrix_code
             else:
-                continue
+                return False
 
 
 
