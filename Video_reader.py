@@ -8,7 +8,7 @@ camera = True
 cap = cv2.VideoCapture(0)
 scale_percent = 80
 scanned_code_list = []
-scanned_data_dict: dict[str, datetime.datetime] = {}  # key: code, value: last detection
+scanned_data_dict : dict[str, datetime.datetime] = {}  # key: code, value: last detection
 
 
 def gradient_operation(frame):
@@ -29,7 +29,7 @@ def gradient_operation(frame):
     return gradient
 
 def blur_and_morph(image):
-    blurred = cv2.blur(image, (7,7))
+    blurred = cv2.blur(image, (5,5))
     (_, thresh1) = cv2.threshold(blurred, 20, 180, cv2.THRESH_BINARY)
 
 
@@ -70,13 +70,13 @@ while True:
         # finding area of the contour so we can consider contours having area greater than 7000 sq.pixels
         area = cv2.contourArea(cnt)
 
-        if area >=30000 and area <= 42250 and shape[0] == 4:
+        if area >=30000 and area <= 42250: #and shape[0] == 4:
             captured = "save_image.jpg"
             cv2.imwrite(captured, frame)
             rect = cv2.minAreaRect(cnt)
 
             x, y, w, h = cv2.boundingRect(cnt)
-            ROI = frame[y - 150:y + h + 50, x - 150:x + w + 100]
+            ROI = frame[y - 100:y + h + 100, x - 100:x + w + 100]
             # ROI = cv2.cvtColor(ROI, cv2.COLOR_BGR2GRAY)
             ret, ROI = cv2.threshold(ROI, 0, 255, cv2.THRESH_OTSU)
             if ROI is not None:
