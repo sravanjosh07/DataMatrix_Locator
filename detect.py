@@ -1,8 +1,7 @@
 class Detect:
     def __init__(self, frame):
         self.frame = frame
-        self.frame_for_roi = frame
-
+        self.image_for_roi = frame
 
     @classmethod
     def locate_data_matrix(cls, frame):
@@ -67,17 +66,13 @@ class Detect:
 
     @staticmethod
     def find_required_contours(closed):
-        contour_offset = 50
+        contour_offset = 30
         contours, hierarchy = cv2.findContours(closed.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
         for contour in contours:
-            peri = cv2.arcLength(contour, True)
-            approx = cv2.approxPolyDP(contour, 0.04 * peri, True)  # approx is a three dimensional array of vertices
-            shape = np.shape(approx)
-            # finding area of the contour so we can consider contours having area greater than 7000 sq.pixels
-            area = cv2.contourArea(contour)
-            if 25000 <= area <= 45550 and shape[0] == 4:
-                rect = cv2.minAreaRect(contour)
-                x, y, w, h = cv2.boundingRect(contour)
+            rect = cv2.boundingRect(contour)
+            if rect[2] > 150 and rect[3] > 150:
+                print(rect)
+                x, y, w, h = rect
 
                 x1 = x - contour_offset
                 y1 = y - contour_offset
@@ -87,6 +82,7 @@ class Detect:
                 y1 = 0 if y1 < 0 else y1
                 roi = image_for_roi[y1:y + h1, x1:x + w1]
                 return roi
+
             else:
                 continue
 
@@ -106,11 +102,6 @@ class Detect:
             Detect.is_code(code)
         except:
             Detect.apply_additional_erosion(closed1)
-            De
-
-
-
-
 
     @staticmethod
     def decode_roi(closed1):
@@ -119,8 +110,6 @@ class Detect:
                 return matrix_code
             else:
                 return False
-
-
 
     # @staticmethod
     # def is_code(code):
@@ -146,22 +135,37 @@ class Detect:
     #     with open('metrics.csv', "a") as csv:
     #         csv.write("{},{}\n".format(filename, 1))
     #
-
+    @classmethod
+    def is_code(cls, code):
+        if code:
+            return True
+        else:
+            return False
 
 
 import cv2
 import numpy as np
+import os
 from pylibdmtx.pylibdmtx import decode
 
 # path = 'Img_Data'
-path = '/Users/Sravan/Desktop/DataMatrix_Locator-master-2/Img_Data/DetectTask 041576 BOTTOM 0.jpg'
-frame = cv2.imread(path)
-image_for_roi = frame
-code = Detect.locate_data_matrix(frame)
-print(code)
-
-
-
+path = 'Img_Data'
+for filename in os.listdir(path):
+    if filename.endswith(".jpg") or filename.endswith(".png"):
+        input_path = os.path.join(path, filename)
+        frame = cv2.imread(input_path)
+        image_for_roi = frame
+        code = Detect.locate_data_matrix(frame)
+        with open('metrics2.csv', "a") as csv:
+            if code:
+                csv.write("{},{}\n".format(filename, 1))
+                continue
+                print(code)
+            else:
+                csv.write("{},{}\n".format(filename, 0))
+                csv.flush()
+                continue
+        print(code)
 
 # for filename in os.listdir(path):
 #     if filename.endswith(".jpg") or filename.endswith(".png"):
