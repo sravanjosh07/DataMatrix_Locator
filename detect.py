@@ -58,7 +58,7 @@ class Detect:
     @staticmethod
     def find_required_contours(closed):
         rois = []
-        contour_offset = 30
+        contour_offset = 35
         side_min = 150
         contours, hierarchy = cv2.findContours(closed.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
         # contours = cv2.findContours(closed.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
