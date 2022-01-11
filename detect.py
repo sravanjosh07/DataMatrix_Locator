@@ -20,10 +20,6 @@ class Detect:
 
             else:
                 continue
-        # difficult_to_read_roi = Detect.preprocessing_difficult_roi(rois)
-        #
-        # my_difficult_code = Detect.extract_code(difficult_to_read_roi)
-        # my_code = my_difficult_code if not my_code else my_code
 
 
     @staticmethod
