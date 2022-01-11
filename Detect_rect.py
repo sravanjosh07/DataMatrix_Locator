@@ -60,22 +60,7 @@ for filename in os.listdir(path):
 
         closed = cv2.erode(closed, None, iterations=2)
         closed = cv2.dilate(closed, None, iterations=3)
-        closed = cv2.dilate(closed, None, iterations=8)
-        
-        def additional_thresholding(roi):
-            gray2 = cv2.cvtColor(ROI, cv2.COLOR_BGR2GRAY)
-            _, thresh2 = cv2.threshold(gray2, 110, 255, cv2.THRESH_BINARY)
-            closed2 = cv2.erode(thresh2, None, iterations=2)
-            closed2 = cv2.dilate(closed2, None, iterations=2)
-            closed2 = cv2.erode(closed2, None, iterations=3)
-            closed2 = cv2.dilate(closed2, None, iterations=3)
-
-            closed2 = cv2.erode(closed2, None, iterations=4)
-            closed2 = cv2.dilate(closed2, None, iterations=4)
-
-            closed2 = cv2.erode(closed2, None, iterations=5)
-            closed2 = cv2.dilate(closed2, None, iterations=5)
-            return closed2
+        closed = cv2.dilate(closed, None, iterations=2)
 
         cnts = cv2.findContours(closed.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
         cnts = imutils.grab_contours(cnts)
@@ -97,8 +82,7 @@ for filename in os.listdir(path):
                 gray1 = cv2.cvtColor(ROI, cv2.COLOR_BGR2GRAY)
                 # ret, thresh1 = cv2.threshold(gray1, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
                 thresh1 = cv2.adaptiveThreshold(gray1, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 97, 43)
-                kernel = np.ones((5, 5), np.uint8)
-                closed1 = cv2.morphologyEx(thresh1, cv2.MORPH_CLOSE, kernel)
+
                 closed1 = cv2.erode(thresh1, None, iterations=3)
                 closed1 = cv2.dilate(closed1, None, iterations=1)
                 closed1 = cv2.erode(closed1, None, iterations=2)
@@ -112,7 +96,7 @@ for filename in os.listdir(path):
                     print(msg1)
                     dictionary_of_Boolean[filename] = 1
                     break
-    with open('metrics2.csv', "a") as csv:
+    with open('metrics4.csv', "a") as csv:
 
         csv.write("{},{}\n".format(filename, dictionary_of_Boolean[filename]))
         csv.flush()

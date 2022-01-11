@@ -12,7 +12,7 @@ DetectTask 049289 BOTTOM 0.jpg,1
 DetectTask 049291 BOTTOM 0.jpg,1
 DetectTask 049299 BOTTOM 0.jpg,1
 DetectTask 049305 BOTTOM 0.jpg,1
-DetectTask 049307 BOTTOM 0.jpg,1
+DetectTask 049307 BOTTOM 0.jpg,0
 DetectTask 049313 BOTTOM 0.jpg,1
 DetectTask 049315 BOTTOM 0.jpg,1
 DetectTask 049321 BOTTOM 0.jpg,1
@@ -270,7 +270,7 @@ DetectTask 050923 BOTTOM 0.jpg,1
 DetectTask 050924 BOTTOM 0.jpg,1
 DetectTask 050930 BOTTOM 0.jpg,1
 DetectTask 050936 BOTTOM 0.jpg,1
-DetectTask 050948 BOTTOM 0.jpg,1
+DetectTask 050948 BOTTOM 0.jpg,0
 DetectTask 050950 BOTTOM 0.jpg,1
 DetectTask 050956 BOTTOM 0.jpg,1
 DetectTask 050962 BOTTOM 0.jpg,1
@@ -431,7 +431,7 @@ DetectTask 053895 BOTTOM 0.jpg,1
 DetectTask 053897 BOTTOM 0.jpg,1
 DetectTask 053904 BOTTOM 0.jpg,0
 DetectTask 053906 BOTTOM 0.jpg,1
-DetectTask 053987 BOTTOM 0.jpg,0
+DetectTask 053987 BOTTOM 0.jpg,1
 DetectTask 053989 BOTTOM 0.jpg,1
 DetectTask 053996 BOTTOM 0.jpg,1
 DetectTask 053998 BOTTOM 0.jpg,1
@@ -439,7 +439,7 @@ DetectTask 054005 BOTTOM 0.jpg,1
 DetectTask 054007 BOTTOM 0.jpg,1
 DetectTask 054008 BOTTOM 0.jpg,1
 DetectTask 054010 BOTTOM 0.jpg,1
-DetectTask 054017 BOTTOM 0.jpg,0
+DetectTask 054017 BOTTOM 0.jpg,1
 DetectTask 054019 BOTTOM 0.jpg,1
 DetectTask 054026 BOTTOM 0.jpg,1
 DetectTask 054028 BOTTOM 0.jpg,1
@@ -466,7 +466,7 @@ DetectTask 054104 BOTTOM 0.jpg,1
 DetectTask 054105 BOTTOM 0.jpg,1
 DetectTask 054107 BOTTOM 0.jpg,1
 DetectTask 054114 BOTTOM 0.jpg,1
-DetectTask 054116 BOTTOM 0.jpg,0
+DetectTask 054116 BOTTOM 0.jpg,1
 DetectTask 054123 BOTTOM 0.jpg,1
 DetectTask 054125 BOTTOM 0.jpg,1
 DetectTask 054132 BOTTOM 0.jpg,1
@@ -486,7 +486,7 @@ DetectTask 054174 BOTTOM 0.jpg,1
 DetectTask 054182 BOTTOM 0.jpg,1
 DetectTask 054183 BOTTOM 0.jpg,1
 DetectTask 054185 BOTTOM 0.jpg,1
-DetectTask 054192 BOTTOM 0.jpg,0
+DetectTask 054192 BOTTOM 0.jpg,1
 DetectTask 054194 BOTTOM 0.jpg,1
 DetectTask 054201 BOTTOM 0.jpg,1
 DetectTask 054203 BOTTOM 0.jpg,1
@@ -510,7 +510,7 @@ DetectTask 054263 BOTTOM 0.jpg,1
 DetectTask 054270 BOTTOM 0.jpg,1
 DetectTask 054272 BOTTOM 0.jpg,1
 DetectTask 054279 BOTTOM 0.jpg,1
-DetectTask 054281 BOTTOM 0.jpg,0
+DetectTask 054281 BOTTOM 0.jpg,1
 DetectTask 054288 BOTTOM 0.jpg,1
 DetectTask 054290 BOTTOM 0.jpg,1
 DetectTask 054297 BOTTOM 0.jpg,1
@@ -521,7 +521,7 @@ DetectTask 054309 BOTTOM 0.jpg,1
 DetectTask 054318 BOTTOM 0.jpg,1
 DetectTask 054320 BOTTOM 0.jpg,1
 DetectTask 054327 BOTTOM 0.jpg,1
-DetectTask 054329 BOTTOM 0.jpg,0
+DetectTask 054329 BOTTOM 0.jpg,1
 DetectTask 054336 BOTTOM 0.jpg,1
 DetectTask 054338 BOTTOM 0.jpg,1
 DetectTask 054345 BOTTOM 0.jpg,1
@@ -531,7 +531,7 @@ DetectTask 054350 BOTTOM 0.jpg,1
 DetectTask 054351 BOTTOM 0.jpg,0
 DetectTask 054357 BOTTOM 0.jpg,1
 DetectTask 054359 BOTTOM 0.jpg,1
-DetectTask 054366 BOTTOM 0.jpg,0
+DetectTask 054366 BOTTOM 0.jpg,1
 DetectTask 054368 BOTTOM 0.jpg,1
 DetectTask 054375 BOTTOM 0.jpg,1
 DetectTask 054377 BOTTOM 0.jpg,1
@@ -558,9 +558,9 @@ DetectTask 054441 BOTTOM 0.jpg,1
 DetectTask 054443 BOTTOM 0.jpg,1
 DetectTask 054444 BOTTOM 0.jpg,1
 DetectTask 054446 BOTTOM 0.jpg,1
-DetectTask 054453 BOTTOM 0.jpg,0
+DetectTask 054453 BOTTOM 0.jpg,1
 DetectTask 054455 BOTTOM 0.jpg,1
-DetectTask 054462 BOTTOM 0.jpg,0
+DetectTask 054462 BOTTOM 0.jpg,1
 DetectTask 054464 BOTTOM 0.jpg,1
 DetectTask 054471 BOTTOM 0.jpg,1
 DetectTask 054473 BOTTOM 0.jpg,1
@@ -602,7 +602,7 @@ DetectTask 054581 BOTTOM 0.jpg,1
 DetectTask 054588 BOTTOM 0.jpg,1
 DetectTask 054590 BOTTOM 0.jpg,1
 DetectTask 054591 BOTTOM 0.jpg,1
-DetectTask 054598 BOTTOM 0.jpg,0
+DetectTask 054598 BOTTOM 0.jpg,1
 DetectTask 054600 BOTTOM 0.jpg,1
 DetectTask 054607 BOTTOM 0.jpg,1
 DetectTask 054609 BOTTOM 0.jpg,0
@@ -626,7 +626,7 @@ DetectTask 054667 BOTTOM 0.jpg,0
 DetectTask 054669 BOTTOM 0.jpg,1
 DetectTask 054676 BOTTOM 0.jpg,1
 DetectTask 054678 BOTTOM 0.jpg,1
-DetectTask 054685 BOTTOM 0.jpg,0
+DetectTask 054685 BOTTOM 0.jpg,1
 DetectTask 054687 BOTTOM 0.jpg,1
 DetectTask 054688 BOTTOM 0.jpg,1
 DetectTask 054693 BOTTOM 0.jpg,1
